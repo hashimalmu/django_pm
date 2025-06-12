@@ -29,7 +29,8 @@ class Project(models.Model):
     Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     user = models.ForeignKey(
         AUTH_USER_MODEL,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null=True
     )
 
 
