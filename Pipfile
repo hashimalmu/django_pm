@@ -71,6 +71,7 @@ wordcloud = "==1.9.3"
 wsproto = "==1.2.0"
 ydata-profiling = "==4.10.0"
 django = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
