@@ -18,6 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from debug_toolbar.toolbar import debug_toolbar_urls
 
+
+admin.site.site_header = ('ادارة المشاريع')
+admin.site.site_title = ('ادارة المشاريع')
+
 urlpatterns = [
     path('', include('projects.urls')),
     path('admin/', admin.site.urls),
