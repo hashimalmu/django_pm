@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django import forms
 from django.contrib.auth.models import User
-
+from django.utils.translation import gettext as _
 
 attrs = {'class':'form-control'}
 
@@ -10,10 +10,10 @@ class UserLoginForm(AuthenticationForm):
         super(UserLoginForm , self).__init__(*args, **kwargs)
 
     username = forms.CharField(
-        label='Username', widget=forms.TextInput(attrs=attrs)
+        label=_('Username'), widget=forms.TextInput(attrs=attrs)
     )
     password = forms.CharField(
-        label='Password', widget=forms.PasswordInput(attrs=attrs)
+        label=_('Password'), widget=forms.PasswordInput(attrs=attrs)
     )
 
 
@@ -21,28 +21,28 @@ class UserLoginForm(AuthenticationForm):
 class UserRegisterForm(UserCreationForm):
 
     first_name = forms.CharField(
-        label='First name',
+        label=_('First name'),
         widget=forms.TextInput(attrs=attrs)
     )
     last_name = forms.CharField(
-        label='Last name', 
+        label=_('Last name'), 
         widget=forms.TextInput(attrs=attrs)
     )
     username = forms.CharField(
-        label='Username', 
+        label=_('Username'), 
         widget=forms.TextInput(attrs=attrs)
     )
     email = forms.EmailField(
-        label='Email', 
+        label=_('Email'), 
         widget=forms.TextInput(attrs=attrs)
     )
     password1 = forms.CharField(
-        label='Password',
+        label=_('Password'),
         strip=False,
         widget=forms.PasswordInput(attrs=attrs)
     )
     password2 = forms.CharField(
-        label='Password Confirmattion',
+        label=_('Password Confirmattion'),
         strip=False,
         widget=forms.PasswordInput(attrs=attrs)
     )

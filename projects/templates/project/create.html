@@ -10,9 +10,10 @@
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token %}
+                        
                         {% include 'common/form.html' with form=form %}
                         <button class='btn btn-success'>
-                            {% translate "Create" %} 
+                            {% trans "Create" %} 
                         </button>
                     </form>
                 </div>
